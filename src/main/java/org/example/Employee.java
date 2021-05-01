@@ -1,6 +1,6 @@
 package org.example;
 
-public class employee {
+public class Employee {
 
         static int portal_id = 0;
         private String name;
@@ -14,11 +14,11 @@ public class employee {
         private boolean at_work = true;
 
 
-        public employee() {
+        public Employee() {
             System.out.println();
         }
 
-        public employee(String name, String surname, String patronymic, String afterbirth, String position, String adress_work, String telephone_stack, boolean at_work/*, String grade*/) {
+        public Employee(String name, String surname, String patronymic, String afterbirth, String position, String adress_work, String telephone_stack, boolean at_work/*, String grade*/) {
             this.name = name;
             this.surname = surname;
             this.patronymic = patronymic;
