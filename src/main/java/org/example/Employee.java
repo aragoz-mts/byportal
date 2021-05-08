@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.Date;
 import java.util.List;
 
 public class Employee {
@@ -9,7 +10,7 @@ public class Employee {
     private String firstName;
     private String lastName;
     private String middleName;
-    private int birthDate;
+    private Date birthDate;
     private String jobPosition;
     private String workingAddress;
     private Integer age;
@@ -21,12 +22,12 @@ public class Employee {
             System.out.println();
         }
 
-    public Employee(String firstName, String lastName, int birthDate) {
+    public Employee(String firstName, String lastName, Date birthDate) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthDate = birthDate;
     }
-    public Employee(String firstName, String lastName, String middleName, int birthDate, String jobPosition, String workingAddress, Integer age, List<String> phoneNumbers, byte availibility) {
+    public Employee(String firstName, String lastName, String middleName, Date birthDate, String jobPosition, String workingAddress, Integer age, List<String> phoneNumbers, byte availibility) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.middleName = middleName;
@@ -70,11 +71,11 @@ public class Employee {
         this.middleName = middleName;
     }
 
-    public int getBirthDate() {
+    public Date getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(int birthDate) {
+    public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
 
@@ -117,11 +118,28 @@ public class Employee {
     public void setAvailibility(byte availibility) {
         this.availibility = availibility;
     }
-
-
-
-
-
-
     }
 
+/*
+public Date(int year, int month, int date) {
+        this(year, month, date, 0, 0, 0);
+    }
+
+    /**
+     * Allocates a {@code Date} object and initializes it so that
+     * it represents the instant at the start of the minute specified by
+     * the {@code year}, {@code month}, {@code date},
+     * {@code hrs}, and {@code min} arguments, in the local
+     * time zone.
+     *
+     * @param   year    the year minus 1900.
+     * @param   month   the month between 0-11.
+     * @param   date    the day of the month between 1-31.
+     * @param   hrs     the hours between 0-23.
+     * @param   min     the minutes between 0-59.
+     * @see     java.util.Calendar
+     * @deprecated As of JDK version 1.1,
+     * replaced by {@code Calendar.set(year + 1900, month, date, hrs, min)}
+     * or {@code GregorianCalendar(year + 1900, month, date, hrs, min)}.
+     */
+ */
