@@ -1,102 +1,126 @@
 package org.example;
 
+import java.util.List;
+
 public class Employee {
 
-        static int portal_id = 0;
-        private String name;
-        private String surname;
-        private String patronymic;
-        private String afterbirth;
-        private String position;
-        private String address_work;
-        // private String grade;
-        private String telephone_stack;
-        private boolean at_work = true;
+
+    static int portal_id = 0;
+    private String firstName;
+    private String lastName;
+    private String middleName;
+    private int birthDate;
+    private String jobPosition;
+    private String workingAddress;
+    private Integer age;
+    private List<String> phoneNumbers;
+    private byte availibility;
 
 
-        public Employee() {
+    public Employee() {
             System.out.println();
         }
 
-        public Employee(String name, String surname, String patronymic, String afterbirth, String position, String address_work, String telephone_stack, boolean at_work/*, String grade*/) {
-            this.name = name;
-            this.surname = surname;
-            this.patronymic = patronymic;
-            this.afterbirth = afterbirth;
-            this.position = position;
-            this.address_work = address_work;
-            this.telephone_stack = telephone_stack;
-            this.at_work = at_work;
-            //this.grade = grade;
-        }
+    public Employee(String firstName, String lastName, int birthDate) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthDate = birthDate;
+    }
+    public Employee(String firstName, String lastName, String middleName, int birthDate, String jobPosition, String workingAddress, Integer age, List<String> phoneNumbers, byte availibility) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.middleName = middleName;
+        this.birthDate = birthDate;
+        this.jobPosition = jobPosition;
+        this.workingAddress = workingAddress;
+        this.age = age;
+        this.phoneNumbers = phoneNumbers;
+        this.availibility = availibility;
+    }
 
-        public String getName() {
-            return name;
-        }
+    public static int getPortal_id() {
+        return portal_id;
+    }
 
-        public String getSurname() {
-            return surname;
-        }
+    public static void setPortal_id(int portal_id) {
+        Employee.portal_id = portal_id;
+    }
 
-        public String getPatronymic() {
-            return patronymic;
-        }
+    public String getFirstName() {
+        return firstName;
+    }
 
-        public String getAfterbirth() {
-            return afterbirth;
-        }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-        public String getPosition() {
-            return position;
-        }
+    public String getLastName() {
+        return lastName;
+    }
 
-        public String getAddress_work() { return address_work;}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-        //public String getGrade() {
-        //  return grade();}
+    public String getMiddleName() {
+        return middleName;
+    }
 
-        public String getTelephone_stack() {
-            return telephone_stack;
-        }
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
 
-        public boolean getAt_work() {
-            return at_work;
-        }
+    public int getBirthDate() {
+        return birthDate;
+    }
 
-        public void setName(String name) {
-            this.name = name;
-        }
+    public void setBirthDate(int birthDate) {
+        this.birthDate = birthDate;
+    }
 
-        public void setSurname (String surname) {
-            this.surname = surname;
-        }
+    public String getJobPosition() {
+        return jobPosition;
+    }
 
-        public void setPatronymic (String patronymic) {
-            this.patronymic = patronymic;
-        }
+    public void setJobPosition(String jobPosition) {
+        this.jobPosition = jobPosition;
+    }
 
-        public void setAfterbirth (String Afterbirth) {
-            this.afterbirth = afterbirth;
-        }
+    public String getWorkingAddress() {
+        return workingAddress;
+    }
 
-        public void setPosition (String position) {
-            this.position = position;
-        }
+    public void setWorkingAddress(String workingAddress) {
+        this.workingAddress = workingAddress;
+    }
 
-        public void setAddress_work(String address_work) {
-            this.address_work = address_work;
-        }
+    public Integer getAge() {
+        return age;
+    }
 
-        //public String getGrade() {
-        //  return grade();}
+    public void setAge(Integer age) {
+        this.age = age;
+    }
 
-        public void setTelephone_stack (String telephone_stack) {
-            this.telephone_stack = telephone_stack;
-        }
+    public List<String> getPhoneNumbers() {
+        return phoneNumbers;
+    }
 
-        public void setAt_work (boolean at_work) {
-            this.at_work = at_work;
-        }
+    public void setPhoneNumbers(List<String> phoneNumbers) {
+        this.phoneNumbers = phoneNumbers;
+    }
+
+    public byte getAvailibility() {
+        return availibility;
+    }
+
+    public void setAvailibility(byte availibility) {
+        this.availibility = availibility;
+    }
+
+
+
+
 
 
     }
