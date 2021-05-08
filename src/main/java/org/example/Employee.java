@@ -6,7 +6,7 @@ import java.util.List;
 public class Employee {
 
 
-    static int portal_id = 0;
+    private int portalId = 0;
     private String firstName;
     private String lastName;
     private String middleName;
@@ -27,7 +27,9 @@ public class Employee {
         this.lastName = lastName;
         this.birthDate = birthDate;
     }
-    public Employee(String firstName, String lastName, String middleName, Date birthDate, String jobPosition, String workingAddress, Integer age, List<String> phoneNumbers, byte availibility) {
+
+    public Employee(int portalId, String firstName, String lastName, String middleName, Date birthDate, String jobPosition, String workingAddress, Integer age, List<String> phoneNumbers, byte availibility) {
+        this.portalId = portalId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.middleName = middleName;
@@ -39,12 +41,12 @@ public class Employee {
         this.availibility = availibility;
     }
 
-    public static int getPortal_id() {
-        return portal_id;
+    public int getPortalId() {
+        return portalId;
     }
 
-    public static void setPortal_id(int portal_id) {
-        Employee.portal_id = portal_id;
+    public void setPortalId(int portalId) {
+        this.portalId = portalId;
     }
 
     public String getFirstName() {
@@ -142,4 +144,3 @@ public Date(int year, int month, int date) {
      * replaced by {@code Calendar.set(year + 1900, month, date, hrs, min)}
      * or {@code GregorianCalendar(year + 1900, month, date, hrs, min)}.
      */
- */
